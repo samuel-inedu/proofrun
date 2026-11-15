@@ -7,9 +7,22 @@ A small harness that tests language models on two kinds of work:
 
 The harness uses only the Python standard library. Bug-fix tasks can be in any language. The samples use Python and JavaScript.
 
+## Tasks in this repository
+
+| Task | Library | Bug | Source |
+|---|---|---|---|
+| `py-more-itertools-1153` | more-itertools | `reversed()` fails on an empty `numeric_range` | [pull request 1153](https://github.com/more-itertools/more-itertools/pull/1153) |
+| `py-more-itertools-1193` | more-itertools | `interleave_evenly()` fails with no iterables | [pull request 1193](https://github.com/more-itertools/more-itertools/pull/1193) |
+| `py-more-itertools-1308` | more-itertools | `bucket()` ignores a falsey validator | [issue 1308](https://github.com/more-itertools/more-itertools/issues/1308) |
+| `js-nanoid-618` | nanoid | The command line tool accepts sizes that are not integers | [pull request 618](https://github.com/ai/nanoid/pull/618) |
+| `js-nanoid-616` | nanoid | Wrong IDs for a size that is not an integer | [pull request 616](https://github.com/ai/nanoid/pull/616) |
+| `py-slugkit-001`, `js-rangekit-001` | samples | Small tasks that show the format | this repository |
+
+Each real task clones the library at the commit before the fix. The tests and the fix come from the library authors. The issue text is a short summary written for this harness.
+
 ## Quick start
 
-You need Python 3.10 or later, git, and Node.js 18 or later (for the JavaScript sample).
+You need Python 3.10 or later, git, and Node.js 18 or later (for the JavaScript tasks). The real tasks need network access to clone the libraries. The harness works on Linux and Windows.
 
 ```bash
 # Check that each task is correct
@@ -95,7 +108,7 @@ my-task-001/
 
 Find a merged pull request that fixes a bug and adds a test. Divide its diff into `tests.patch` and `gold.patch`. Then run `python3 -m proofrun validate --only my-task-001`.
 
-`context_files` is optional. Without it, the prompt includes all text files up to a size limit. Set it for a large repository.
+`context_files` is optional. Without it, the prompt includes all text files up to a size limit. Set it for a large repository. The harness sends the listed files in full.
 
 ## Add a research question
 

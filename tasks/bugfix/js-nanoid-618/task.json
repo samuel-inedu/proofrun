@@ -1,0 +1,19 @@
+{
+  "id": "js-nanoid-618",
+  "language": "javascript",
+  "repo_url": "https://github.com/ai/nanoid.git",
+  "base_commit": "3167e108865702c0539d8e552365ed840ac9d8d9",
+  "fix_commit": "58193a1d3aab9877315c42e995eb94667e0b1a4a",
+  "source": "https://github.com/ai/nanoid/pull/618",
+  "image": "node:22-slim",
+  "fail_to_pass": [
+    "node --test --test-name-pattern=\"rejects non-integer size\" test/bin.test.js"
+  ],
+  "pass_to_pass": [
+    "node --test test/bin.test.js",
+    "node --test test/non-secure.test.js"
+  ],
+  "context_files": [
+    "bin/nanoid.js"
+  ]
+}

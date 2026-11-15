@@ -1,0 +1,18 @@
+{
+  "id": "py-more-itertools-1193",
+  "language": "python",
+  "repo_url": "https://github.com/more-itertools/more-itertools.git",
+  "base_commit": "5d946b3590bfe92f1465c1b9b9830dd434745c84",
+  "fix_commit": "b363d6b82c7082db647bd350560fca5e1d724a16",
+  "source": "https://github.com/more-itertools/more-itertools/pull/1193",
+  "image": "python:3.12-slim",
+  "fail_to_pass": [
+    "python3 -m unittest tests.test_more.InterleaveEvenlyTests.test_no_iterables"
+  ],
+  "pass_to_pass": [
+    "python3 -m unittest tests.test_more.InterleaveEvenlyTests"
+  ],
+  "context_files": [
+    "more_itertools/more.py"
+  ]
+}

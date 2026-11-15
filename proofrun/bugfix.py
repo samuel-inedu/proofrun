@@ -80,7 +80,8 @@ def read_context(task, work):
             text = path.read_text(encoding="utf-8")
         except (UnicodeDecodeError, OSError):
             continue
-        if used + len(text) > MAX_CONTEXT_CHARS:
+        # The size limit applies only when the task does not list its context files.
+        if not wanted and used + len(text) > MAX_CONTEXT_CHARS:
             break
         used += len(text)
         parts.append(f"### {path.relative_to(work)}\n```\n{text}\n```")
