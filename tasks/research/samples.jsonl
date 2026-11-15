@@ -1,0 +1,3 @@
+{"id": "sample-number-001", "question": "How many bits does an IPv6 address have?", "answer": "128", "answer_type": "number", "sources": [], "note": "Format sample. Not a hard task."}
+{"id": "sample-date-001", "question": "On which date did Nigeria become independent?", "answer": "1960-10-01", "answer_type": "date", "sources": [], "note": "Format sample. Not a hard task."}
+{"id": "sample-text-001", "question": "Which city is the capital of Australia?", "answer": "Canberra", "answer_type": "text", "aliases": ["Canberra, Australian Capital Territory"], "sources": [], "note": "Format sample. Not a hard task."}

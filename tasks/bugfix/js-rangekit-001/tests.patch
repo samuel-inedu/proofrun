@@ -1,0 +1,18 @@
+diff --git a/test/descending.test.js b/test/descending.test.js
+new file mode 100644
+index 0000000..0b98387
+--- /dev/null
++++ b/test/descending.test.js
+@@ -0,0 +1,12 @@
++'use strict';
++const test = require('node:test');
++const assert = require('node:assert/strict');
++const { range } = require('../src/range.js');
++
++test('counts down with a negative step', () => {
++  assert.deepEqual(range(5, 0, -1), [5, 4, 3, 2, 1]);
++});
++
++test('counts down by a custom step', () => {
++  assert.deepEqual(range(10, 0, -5), [10, 5]);
++});

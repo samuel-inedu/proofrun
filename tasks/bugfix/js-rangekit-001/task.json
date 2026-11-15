@@ -1,0 +1,7 @@
+{
+  "id": "js-rangekit-001",
+  "language": "javascript",
+  "image": "node:22-slim",
+  "fail_to_pass": ["node --test test/descending.test.js"],
+  "pass_to_pass": ["node --test test/range.test.js"]
+}

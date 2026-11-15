@@ -1,0 +1,21 @@
+diff --git a/tests/test_separators.py b/tests/test_separators.py
+new file mode 100644
+index 0000000..c3384be
+--- /dev/null
++++ b/tests/test_separators.py
+@@ -0,0 +1,15 @@
++import unittest
++
++from slugkit import slugify
++
++
++class TestSeparators(unittest.TestCase):
++    def test_punctuation_and_repeated_spaces(self):
++        self.assertEqual(slugify("Hello,  World!"), "hello-world")
++
++    def test_no_separator_at_the_ends(self):
++        self.assertEqual(slugify("  --Draft: v2--  "), "draft-v2")
++
++
++if __name__ == "__main__":
++    unittest.main()

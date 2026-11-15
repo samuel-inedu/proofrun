@@ -1,0 +1,7 @@
+{
+  "id": "py-slugkit-001",
+  "language": "python",
+  "image": "python:3.12-slim",
+  "fail_to_pass": ["python3 -m unittest tests.test_separators"],
+  "pass_to_pass": ["python3 -m unittest tests.test_slug"]
+}

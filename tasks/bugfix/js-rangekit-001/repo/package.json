@@ -1,0 +1,6 @@
+{
+  "name": "rangekit",
+  "version": "1.0.0",
+  "main": "src/range.js",
+  "scripts": { "test": "node --test test/" }
+}
